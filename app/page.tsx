@@ -1,95 +1,49 @@
-import Image from 'next/image'
+"use client"
+
+import { use } from 'react'
+// import Image from 'next/image'
 import styles from './page.module.css'
+// import { text } from 'stream/consumers'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+    <div style={{ textAlign: "center", background: 'aqua', }}>
+      <h1 style={{ color: "red", textAlign: "center" }}>Registeration Form</h1>
+      <br /><br />
+      <div style={{ display: "flex", gap: "20px", justifyContent: 'center' }}>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          First Name  <input style={{ height: '30px' }} type="text" placeholder='Enter Your First Name' />
         </div>
+        <div>
+          Last Name < input style={{ height: '30px' }} type="text" placeholder='Enter Your Last Name' />
+        </div >
+      </div >
+      <br /><br />
+      <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
+        <p>Enter Your Email</p> <input style={{ width: '27%', height: '30px' }} type="text" placeholder='Enter Your Email' />
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <br />
+      <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
+        <p>Enter Your Password</p> <input style={{ width: '25%', height: '30px' }} type="text" placeholder='Enter Your Password' />
       </div>
+      <br />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
+        <p>Confirm Your Password</p> <input style={{ width: '24%', height: '30px' }} type="text" placeholder='Confirm Your Password' />
+      </div>      <br />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      Gender:
+      Male < input type="radio" />
+      Female < input type="radio" />
+      <br /><br />
+      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+        <input type="checkbox" /> I agree terms and conditions
+        < br /><br />
+        <input type="checkbox" /> I want to receive the newsletter
+        < br /><br />
       </div>
-    </main>
+      <br /><br />
+      <button style={{ width: '30%', height: '35px', background: 'yellow' }}>Register Now</button>
+    </div >
   )
 }
